@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>♥backgroundlight-therapy♥</title>
+    <link rel="icon" type="image/x-icon" href="/img/heart.png">
+</head>
+<body>
+<!--MAIN-->
+<audio autoplay>
+    <source src="sound/333210__astronautchild__message-of-the-sun.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+
+<div class="title"><img style="height:30px;" src="img/heart.png" alt="">backgroundlight therapy</div>
+<a href="index.html"><img class="arrow-back" src="img/heart.png" alt=""></a>
+<img class="background-blur" src="img/background-blur_01.png" alt="">
+<img class="background-blur♥" src="img/background-blur_02.png" alt="">
+<img class="background-blur" src="img/background-blur_03.png" alt="">
+<img class="background-blur♥" src="img/background-blur_04.png" alt="">
+<img class="background-blur" src="img/background-blur_05.png" alt="">
+<img class="background-blur♥" src="img/background-blur_06.png" alt="">
+<img class="background-blur" src="img/background-blur_07.png" alt="">
+<img class="background-blur♥" src="img/background-blur_08.png" alt="">
+<img class="background-blur" src="img/background-blur_09.png" alt="">
+<img class="background-blur♥" src="img/background-blur_10.png" alt="">
+<img class="background-blur" src="img/background-blur_11.png" alt="">
+<img class="background-blur♥♥" src="img/background-blur_12.png" alt="">
+<img class="background-blur♥♥♥" src="img/background-blur_13.png" alt="">
+
+
+<script src="script.js"></script>
+<script>
+    var rev = "fwd";
+    function titlebar(val){
+        var msg  = "♥backgroundlight-therapy♥";
+        var res = " ";
+        var speed = 100;
+        var pos = val;
+        msg = ""+msg+"";
+        var le = msg.length;
+        if(rev == "fwd"){
+            if(pos < le){
+                pos = pos+1;
+                scroll = msg.substr(0,pos);
+                document.title = scroll;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "bwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+        else {
+            if(pos > 0) {
+                pos = pos-1;
+                var ale = le-pos;
+                scrol = msg.substr(ale,le);
+                document.title = scrol;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "fwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+    }
+    titlebar(0);
+
+    var timeUp = function() {
+    alert("you spend 10 minutes in this space. Try a different one!");
+};
+setTimeout(timeUp, 600000);
+</script>
+</body>
+</html>

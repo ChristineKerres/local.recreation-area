@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>♥♥♥♥local.recreation area♥♥♥♥</title>
+    <link rel="icon" type="image/x-icon" href="/img/heart.png">
+    <script src="jquery-3.6.1.min.js"></script>
+</head>
+<body>
+<!--INFOBOX-->    
+<div id="overlay"></div>
+
+<div id="infobox" class="infobox">
+    <button data-close-button class="close-button">&times;</button>
+    <div>
+<br>love by default
+
+<br>
+<br>// There must be more love 
+by default! 
+<br>
+Our lives are
+shifting more and more 
+into the digital realm. 
+We exist alongside our 
+version in the real world,
+multiple times in digital
+worlds. The digital world
+is still built far too 
+strongly on the capitalist 
+idea, it is not tailored 
+to our needs and that 
+includes having a place 
+to rest and reset.
+Using the existing energy 
+from the digital world, 
+local.recreation area is 
+a space for selfcare.
+    </div>
+</div>
+<!--MAIN-->
+<img id="blur-tb" src="img/blur_tb.png" alt="">
+<img id="blur-lr" src="img/blur_lr.png" alt="">
+<h1 data-infobox-target="#infobox" style="cursor: pointer;">local.recreation area</h1>
+
+<div class="areas">
+<img style="height:20px;" src="img/heart.png" alt=""><a class="space" href="interface-meditation.html" style="letter-spacing: 0.105em;"> interface meditation <img style="height:20px;" src="img/heart.png" alt=""></a>
+<br><img style="height:20px;" src="img/heart.png" alt=""><a class="space" href="CPU-energy.html" style="letter-spacing: 0.48em;"> cpu energy <img style="height:20px;" src="img/heart.png" alt=""></a>
+<br><img style="height:20px;" src="img/heart.png" alt=""><a class="space" href="telepathic-touch.html" style="letter-spacing: 0.3em;"> telepathic touch <img style="height:20px;" src="img/heart.png" alt=""></a>
+<br><img style="height:20px;" src="img/heart.png" alt=""><a class="space" href="backgroundlight-therapy.html" style="letter-spacing: 0.01em;"> backgroundlight therapy <img style="height:20px;" src="img/heart.png" alt=""></a> 
+</div>
+
+<button id="message"><a target="_blank" href="https://docs.google.com/document/d/1oZpoY2PPIfeDIYY411yyQHqt0rw3iNGIg3Twcsmezsg/edit?usp=sharing">guestbook</a></button>
+
+<script src="script.js"></script>
+<script>
+    var rev = "fwd";
+    function titlebar(val){
+        var msg  = "♥♥♥♥local.recreation area♥♥♥♥";
+        var res = " ";
+        var speed = 100;
+        var pos = val;
+        msg = ""+msg+"";
+        var le = msg.length;
+        if(rev == "fwd"){
+            if(pos < le){
+                pos = pos+1;
+                scroll = msg.substr(0,pos);
+                document.title = scroll;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "bwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+        else {
+            if(pos > 0) {
+                pos = pos-1;
+                var ale = le-pos;
+                scrol = msg.substr(ale,le);
+                document.title = scrol;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "fwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+    }
+    titlebar(0);
+</script>
+</body>
+</html>
