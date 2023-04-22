@@ -1,3 +1,11 @@
+@font-face {
+  font-family: MingLiU;
+  src: url(fonts/MINGLIU.ttf);
+}
+@font-face {
+  font-family: Manifont Grotesk;
+  src: url(fonts//ManifontGroteskBoldItalic.otf);
+}
 html {
   font-family: Manifont Grotesk;
   font-style: italic;
