@@ -1,307 +1,403 @@
 <!DOCTYPE html>
-<html style="background: radial-gradient(#708384 60%, #93a2dc);" lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<html style="background: radial-gradient(#708384 60%, #93a2dc)" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>♥telepathic-touch♥</title>
-    <link rel="icon" type="image/x-icon" href="/img/heart.png">
-</head>
-<body>
-<!--MAIN-->
-<div class="title"><img style="height:30px;" src="img/heart.png" alt="">telepathic touch</div>
-<a href="index.html"><img class="arrow-back" src="img/heart.png" alt=""></a>
+    <link rel="icon" type="image/x-icon" href="/img/heart.png" />
+  </head>
+  <body onLoad="lauftext()">
+    <input class="lauftext" type="text" name="newsticker" />
+    <div id="gradient-04"></div>
+    <!--MAIN-->
+    <div class="title">
+      <img style="height: 30px" src="img/heart.png" alt="" />telepathic touch
+    </div>
+    <a href="index.html"
+      ><img class="arrow-back" src="img/heart.png" alt=""
+    /></a>
 
-<button id="b1">add touchpoint♥</button>
+    <button id="b1">add touchpoint♥</button>
 
-<div id="outer">
-	<div style="position: fixed; top: 200px; left: 300px;" class="draggable">
-        <img class="finger" src="img/finger.png" alt="">
-		<button class="close">&times;</button>
-	</div>
-</div>
+    <div id="outer">
+      <div style="position: fixed; top: 200px; left: 300px" class="draggable">
+        <img class="finger" src="img/finger.png" alt="" />
+        <button class="close">&times;</button>
+      </div>
+    </div>
 
-<div hidden id="Lager">
-    <div class="draggable">
-        <img class="finger" src="img/finger.png" alt="">
-		<button class="close">&times;</button>
-	</div>
-</div>
+    <div hidden id="Lager">
+      <div class="draggable">
+        <img class="finger" src="img/finger.png" alt="" />
+        <button class="close">&times;</button>
+      </div>
+    </div>
 
-<div class="scanning-hidden" style="transform: scale(-1);">
-<div class="scanning" style="transform:scale(1)"><img src="img/scan.png" alt=""></div>
-<div class="scanning" style="transform:scale(0.9)"><img src="img/scan.png" alt=""></div>
-<div class="scanning" style="transform:scale(0.8)"><img src="img/scan.png" alt=""></div>
-<div class="scanning" style="transform:scale(0.7)"><img src="img/scan.png" alt=""></div>
-<div class="scanning" style="transform:scale(0.6)"><img src="img/scan.png" alt=""></div>
-<div class="scanning" style="transform:scale(0.5)"><img src="img/scan.png" alt=""></div>
-<div class="scanning" style="transform:scale(0.4)"><img src="img/scan.png" alt=""></div>
-<div class="scanning" style="transform:scale(0.3)"><img src="img/scan.png" alt=""></div>
-<div class="scanning" style="transform:scale(0.2)"><img src="img/scan.png" alt=""></div>
-<div class="scanning" style="transform:scale(0.1)"><img src="img/scan.png" alt=""></div>
-</div>
+    <div class="scanning-hidden" style="transform: scale(-1)">
+      <div class="scanning" style="transform: scale(1)">
+        <img src="img/scan.png" alt="" />
+      </div>
+      <div class="scanning" style="transform: scale(0.9)">
+        <img src="img/scan.png" alt="" />
+      </div>
+      <div class="scanning" style="transform: scale(0.8)">
+        <img src="img/scan.png" alt="" />
+      </div>
+      <div class="scanning" style="transform: scale(0.7)">
+        <img src="img/scan.png" alt="" />
+      </div>
+      <div class="scanning" style="transform: scale(0.6)">
+        <img src="img/scan.png" alt="" />
+      </div>
+      <div class="scanning" style="transform: scale(0.5)">
+        <img src="img/scan.png" alt="" />
+      </div>
+      <div class="scanning" style="transform: scale(0.4)">
+        <img src="img/scan.png" alt="" />
+      </div>
+      <div class="scanning" style="transform: scale(0.3)">
+        <img src="img/scan.png" alt="" />
+      </div>
+      <div class="scanning" style="transform: scale(0.2)">
+        <img src="img/scan.png" alt="" />
+      </div>
+      <div class="scanning" style="transform: scale(0.1)">
+        <img src="img/scan.png" alt="" />
+      </div>
+    </div>
 
-<div class="scanning" style="transform:scale(1)"><img src="img/scan.png" alt=""></div>
-<div class="scanning" style="transform:scale(0.9)"><img src="img/scan.png" alt=""></div>
-<div class="scanning" style="transform:scale(0.8)"><img src="img/scan.png" alt=""></div>
-<div class="scanning" style="transform:scale(0.7)"><img src="img/scan.png" alt=""></div>
-<div class="scanning" style="transform:scale(0.6)"><img src="img/scan.png" alt=""></div>
-<div class="scanning" style="transform:scale(0.5)"><img src="img/scan.png" alt=""></div>
-<div class="scanning" style="transform:scale(0.4)"><img src="img/scan.png" alt=""></div>
-<div class="scanning" style="transform:scale(0.3)"><img src="img/scan.png" alt=""></div>
-<div class="scanning" style="transform:scale(0.2)"><img src="img/scan.png" alt=""></div>
-<div class="scanning" style="transform:scale(0.1)"><img src="img/scan.png" alt=""></div>
+    <div class="scanning" style="transform: scale(1)">
+      <img src="img/scan.png" alt="" />
+    </div>
+    <div class="scanning" style="transform: scale(0.9)">
+      <img src="img/scan.png" alt="" />
+    </div>
+    <div class="scanning" style="transform: scale(0.8)">
+      <img src="img/scan.png" alt="" />
+    </div>
+    <div class="scanning" style="transform: scale(0.7)">
+      <img src="img/scan.png" alt="" />
+    </div>
+    <div class="scanning" style="transform: scale(0.6)">
+      <img src="img/scan.png" alt="" />
+    </div>
+    <div class="scanning" style="transform: scale(0.5)">
+      <img src="img/scan.png" alt="" />
+    </div>
+    <div class="scanning" style="transform: scale(0.4)">
+      <img src="img/scan.png" alt="" />
+    </div>
+    <div class="scanning" style="transform: scale(0.3)">
+      <img src="img/scan.png" alt="" />
+    </div>
+    <div class="scanning" style="transform: scale(0.2)">
+      <img src="img/scan.png" alt="" />
+    </div>
+    <div class="scanning" style="transform: scale(0.1)">
+      <img src="img/scan.png" alt="" />
+    </div>
 
-<script>
-    var rev = "fwd";
-    function titlebar(val){
-        var msg  = "♥telepathic-touch♥";
+    <script>
+      var text =
+        " ... :∷::∷: set the touch points with your fingerprints :∷::∷: position your laptop in a comfortable distance in front of you on a table or on the floor :∷::∷: touch the screen with your hands :∷::∷: feel the connection between you and the screen surface :∷::∷: ";
+      var begin = 0;
+      var end = text.length;
+
+      function lauftext() {
+        document.getElementsByName("newsticker")[0].value =
+          "" + text.substring(begin, end) + " " + text.substring(0, begin);
+        begin++;
+        if (begin >= end) {
+          begin = 0;
+        }
+        window.setTimeout("lauftext()", 120);
+      }
+
+      var rev = "fwd";
+      function titlebar(val) {
+        var msg = "♥telepathic-touch♥";
         var res = " ";
         var speed = 100;
         var pos = val;
-        msg = ""+msg+"";
+        msg = "" + msg + "";
         var le = msg.length;
-        if(rev == "fwd"){
-            if(pos < le){
-                pos = pos+1;
-                scroll = msg.substr(0,pos);
-                document.title = scroll;
-                timer = window.setTimeout("titlebar("+pos+")",speed);
-            }
-            else {
-                rev = "bwd";
-                timer = window.setTimeout("titlebar("+pos+")",speed);
-            }
+        if (rev == "fwd") {
+          if (pos < le) {
+            pos = pos + 1;
+            scroll = msg.substr(0, pos);
+            document.title = scroll;
+            timer = window.setTimeout("titlebar(" + pos + ")", speed);
+          } else {
+            rev = "bwd";
+            timer = window.setTimeout("titlebar(" + pos + ")", speed);
+          }
+        } else {
+          if (pos > 0) {
+            pos = pos - 1;
+            var ale = le - pos;
+            scrol = msg.substr(ale, le);
+            document.title = scrol;
+            timer = window.setTimeout("titlebar(" + pos + ")", speed);
+          } else {
+            rev = "fwd";
+            timer = window.setTimeout("titlebar(" + pos + ")", speed);
+          }
         }
-        else {
-            if(pos > 0) {
-                pos = pos-1;
-                var ale = le-pos;
-                scrol = msg.substr(ale,le);
-                document.title = scrol;
-                timer = window.setTimeout("titlebar("+pos+")",speed);
+      }
+      titlebar(0);
+
+      ////Drag element
+
+      document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+          let i = 0,
+            x0 = 40,
+            y0 = 130;
+
+          document.querySelector("#b1").addEventListener(
+            "click",
+            function () {
+              let newdiv = document
+                .querySelector("#Lager .draggable")
+                .cloneNode(true);
+              newdiv.style.left =
+                x0 + i * [Math.floor(Math.random() * 100)] + "px";
+              newdiv.style.top =
+                y0 + i * [Math.floor(Math.random() * 100)] + "px";
+              i++;
+              document.querySelector("#outer").appendChild(newdiv);
+            },
+            false
+          );
+          document.body.addEventListener(
+            "click",
+            function (e) {
+              if (e.target.classList && e.target.classList.contains("close"))
+                e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+            },
+            false
+          );
+        },
+        false
+      );
+      // drag_n_drop.js
+      // 6. 1. 2021
+      // Alle Elemente mit der Klasse "draggable" werden verschiebbar gemacht
+      document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+          "use strict";
+          // Klasse für verschiebbare Elemente
+          const drag_class = "draggable";
+          // Prüfen, welche Eventmodelle unterstützt werden und welches verwendet werden soll
+          const pointer_event = "PointerEvent" in window;
+          const touch_event = "TouchEvent" in window && !pointer_event;
+          // Einige Variablen
+          let pos0; // Pointerposition bei down
+          let start; // Position des Dragobjekts bei down
+          let zmax = 1000; // Start z-Index für die Dragelemente, muss evtl. angepasst werden
+          let dragele = null; // Das aktuelle Dragelement
+          // Bestimmen der Pointerposition
+          function get_pointer_pos(e) {
+            let posx = 0,
+              posy = 0;
+            if (
+              touch_event &&
+              e.targetTouches &&
+              e.targetTouches[0] &&
+              e.targetTouches[0].clientX
+            ) {
+              posx = e.targetTouches[0].clientX;
+              posy = e.targetTouches[0].clientY;
+            } else if (e.clientX) {
+              posx = e.clientX;
+              posy = e.clientY;
             }
-            else {
-                rev = "fwd";
-                timer = window.setTimeout("titlebar("+pos+")",speed);
+            return {
+              x: posx,
+              y: posy,
+            };
+          } // get_pointer_pos
+          //Eventhandler für pointerdown, touchstart oder mousedown
+          function handle_down(e) {
+            const pos = get_pointer_pos(e);
+            down(e, pos);
+          } // handle_down
+          //Eventhandler für pointermove, touchmove oder mousemove
+          function handle_move(e) {
+            const pos = get_pointer_pos(e);
+            move(e, pos);
+          } // handle_move
+          //Eventhandler für pointerup, touchend oder mouseup
+          function handle_up(e) {
+            up(e);
+          } // handle_up
+          //Eventhandler für keydown
+          function handle_keydown(e) {
+            const keyCode = e.keyCode;
+            let xwert = 0,
+              ywert = 0;
+            if (
+              keyCode &&
+              (keyCode == 27 ||
+                keyCode == 37 ||
+                keyCode == 38 ||
+                keyCode == 39 ||
+                keyCode == 40)
+            ) {
+              let delta = e.shiftKey ? 10 : 1;
+              down(e, {
+                x: 0,
+                y: 0,
+              });
+              switch (keyCode) {
+                case 37: // links
+                  xwert = -delta;
+                  break;
+                case 38: // rauf
+                  ywert = -delta;
+                  break;
+                case 39: // rechts
+                  xwert = delta;
+                  break;
+                case 40: // runter
+                  ywert = delta;
+                  break;
+                case 27: // Escape
+                  esc();
+                  up(e);
+                  return;
+                  break;
+              }
+              move(e, {
+                x: xwert,
+                y: ywert,
+              });
+              up(e);
             }
-        }
-    }
-    titlebar(0);
+          } // keydown
+          // Auswahl des Dragelements und Start der Dragaktion
+          function down(e, pos) {
+            const target = parent(e.target, drag_class);
+            if (target) {
+              document.body.style.touchAction = "none";
+              e.preventDefault();
+              dragele = target;
+              start = {
+                x: dragele.offsetLeft,
+                y: dragele.offsetTop,
+              };
+              pos0 = pos;
+              dragele.style.zIndex = ++zmax;
+              dragele.focus();
+            }
+          } // down
+          // Bewegen des Dragelements
+          function move(e, pos) {
+            if (dragele) {
+              e.preventDefault();
+              dragele.style.left = start.x + pos.x - pos0.x + "px";
+              dragele.style.top = start.y + pos.y - pos0.y + "px";
+            }
+          } // move
+          // Ende der Aktion
+          function up(e) {
+            if (dragele) {
+              dragele = null;
+              document.body.style.touchAction = "auto";
+            }
+          } // up
+          // Defokussieren bei ESC-Taste
+          function esc() {
+            if (dragele) dragele.blur();
+          } // esc
+          // Dragbares Element mit Tab-Index für die Fokussierbarkeit und Eventhandler für Unterdrückung der Standardaktion versehen
+          function finish(ele) {
+            ele.tabIndex = 0;
+            if (!pointer_event) {
+              ele.addEventListener(
+                "touchmove",
+                function (e) {
+                  e.preventDefault();
+                },
+                false
+              );
+            }
+          } // finish
+          // Vorfahrenelement mit Klasse classname suchen
+          function parent(child, classname) {
+            if (child && "closest" in child)
+              return child.closest("." + classname);
+            let ele = child;
+            while (ele) {
+              if (ele.classList && ele.classList.contains(classname))
+                return ele;
+              else ele = ele.parentElement;
+            }
+            return null;
+          } // parent
+          // Alle Eventhandler notieren
+          if (pointer_event) {
+            document.body.addEventListener("pointerdown", handle_down, false);
+            document.body.addEventListener("pointermove", handle_move, false);
+            document.body.addEventListener("pointerup", handle_up, false);
+          } else if (touch_event) {
+            document.body.addEventListener("touchstart", handle_down, false);
+            document.body.addEventListener("touchmove", handle_move, false);
+            document.body.addEventListener("touchend", handle_up, false);
+          } else {
+            document.body.addEventListener("mousedown", handle_down, false);
+            document.body.addEventListener("mousemove", handle_move, false);
+            document.body.addEventListener("mouseup", handle_up, false);
+          }
+          document.body.addEventListener("keydown", handle_keydown, false);
+          // finish für alle verschiebbaren Elemente aufrufen
+          const draggable = document.querySelectorAll("." + drag_class);
+          for (let i = 0; i < draggable.length; i++) {
+            finish(draggable[i]);
+          }
+          // css-Angaben für die Bedienbarkeit
+          const style = document.createElement("style");
+          style.innerText =
+            "." +
+            drag_class +
+            ":focus { box-shadow: 10px 30px 15px #bb5776; outline: 0; border-radius: 80px; } " +
+            "." +
+            drag_class +
+            " { position: absolute; cursor: move; touch-action: none; } ";
+          document.head.appendChild(style);
+          // finish für nachträglich erzeugte verschiebbare Elemente aufrufen
+          new MutationObserver(function (mutationsList) {
+            for (let i = 0; i < mutationsList.length; i++) {
+              if (mutationsList[i].type === "childList") {
+                for (let j = 0; j < mutationsList[i].addedNodes.length; j++) {
+                  if (
+                    mutationsList[i].addedNodes[j].classList &&
+                    mutationsList[i].addedNodes[j].classList.contains(
+                      drag_class
+                    )
+                  ) {
+                    finish(mutationsList[i].addedNodes[j]);
+                  }
+                }
+              }
+            }
+          }).observe(document.body, {
+            childList: true,
+            subtree: true,
+          });
+        },
+        false
+      ); // DOMContentLoaded
+      // Ende drag_n_drop.js
 
-////Drag element
-
-document.addEventListener("DOMContentLoaded", function () {
-	let i = 0,
-		x0 = 40,
-		y0 = 130;
-    
-	document.querySelector("#b1")
-		.addEventListener("click", function () {
-			let newdiv = document.querySelector("#Lager .draggable")
-				.cloneNode(true);
-			newdiv.style.left = x0 + i * [Math.floor(Math.random() * 100)] + "px";
-			newdiv.style.top = y0 + i * [Math.floor(Math.random() * 100)] + "px";
-			i++;
-			document.querySelector("#outer")
-				.appendChild(newdiv);
-		}, false);
-	document.body.addEventListener("click", function (e) {
-		if (e.target.classList && e.target.classList.contains("close")) e.target.parentNode
-			.parentNode.removeChild(e.target.parentNode);
-	}, false);
-}, false);
-// drag_n_drop.js
-// 6. 1. 2021
-// Alle Elemente mit der Klasse "draggable" werden verschiebbar gemacht
-document.addEventListener("DOMContentLoaded", function () {
-	"use strict"
-	// Klasse für verschiebbare Elemente
-	const drag_class = "draggable";
-	// Prüfen, welche Eventmodelle unterstützt werden und welches verwendet werden soll
-	const pointer_event = ("PointerEvent" in window);
-	const touch_event = ("TouchEvent" in window) && !pointer_event;
-	// Einige Variablen
-	let pos0; // Pointerposition bei down
-	let start; // Position des Dragobjekts bei down
-	let zmax = 1000; // Start z-Index für die Dragelemente, muss evtl. angepasst werden
-	let dragele = null; // Das aktuelle Dragelement
-	// Bestimmen der Pointerposition
-	function get_pointer_pos(e) {
-			let posx = 0,
-				posy = 0;
-			if (touch_event && e.targetTouches && e.targetTouches[0] && e.targetTouches[
-					0].clientX) {
-				posx = e.targetTouches[0].clientX;
-				posy = e.targetTouches[0].clientY;
-			} else if (e.clientX) {
-				posx = e.clientX;
-				posy = e.clientY;
-			}
-			return {
-				x: posx,
-				y: posy
-			};
-		} // get_pointer_pos
-		//Eventhandler für pointerdown, touchstart oder mousedown
-	function handle_down(e) {
-			const pos = get_pointer_pos(e);
-			down(e, pos);
-		} // handle_down
-		//Eventhandler für pointermove, touchmove oder mousemove
-	function handle_move(e) {
-			const pos = get_pointer_pos(e);
-			move(e, pos);
-		} // handle_move
-		//Eventhandler für pointerup, touchend oder mouseup
-	function handle_up(e) {
-			up(e);
-		} // handle_up
-		//Eventhandler für keydown
-	function handle_keydown(e) {
-			const keyCode = e.keyCode;
-			let xwert = 0,
-				ywert = 0;
-			if (keyCode && (keyCode == 27 || keyCode == 37 || keyCode == 38 || keyCode ==
-					39 || keyCode == 40)) {
-				let delta = e.shiftKey ? 10 : 1;
-				down(e, {
-					x: 0,
-					y: 0
-				});
-				switch (keyCode) {
-				case 37: // links
-					xwert = -delta;
-					break;
-				case 38: // rauf
-					ywert = -delta;
-					break;
-				case 39: // rechts
-					xwert = delta;
-					break;
-				case 40: // runter
-					ywert = delta;
-					break;
-				case 27: // Escape
-					esc();
-					up(e);
-					return;
-					break;
-				}
-				move(e, {
-					x: xwert,
-					y: ywert
-				});
-				up(e);
-			}
-		} // keydown
-		// Auswahl des Dragelements und Start der Dragaktion
-	function down(e, pos) {
-			const target = parent(e.target, drag_class);
-			if (target) {
-				document.body.style.touchAction = "none";
-				e.preventDefault();
-				dragele = target;
-				start = {
-					x: dragele.offsetLeft,
-					y: dragele.offsetTop
-				};
-				pos0 = pos;
-				dragele.style.zIndex = ++zmax;
-				dragele.focus();
-			}
-		} // down
-		// Bewegen des Dragelements
-	function move(e, pos) {
-			if (dragele) {
-				e.preventDefault();
-				dragele.style.left = (start.x + pos.x - pos0.x) + "px";
-				dragele.style.top = (start.y + pos.y - pos0.y) + "px";
-			}
-		} // move
-		// Ende der Aktion
-	function up(e) {
-			if (dragele) {
-				dragele = null;
-				document.body.style.touchAction = "auto";
-			}
-		} // up
-		// Defokussieren bei ESC-Taste
-	function esc() {
-			if (dragele) dragele.blur();
-		} // esc
-		// Dragbares Element mit Tab-Index für die Fokussierbarkeit und Eventhandler für Unterdrückung der Standardaktion versehen
-	function finish(ele) {
-			ele.tabIndex = 0;
-			if (!pointer_event) {
-				ele.addEventListener("touchmove", function (e) {
-					e.preventDefault()
-				}, false);
-			}
-		} // finish
-		// Vorfahrenelement mit Klasse classname suchen
-	function parent(child, classname) {
-			if (child && "closest" in child) return child.closest("." + classname);
-			let ele = child;
-			while (ele) {
-				if (ele.classList && ele.classList.contains(classname)) return ele;
-				else ele = ele.parentElement;
-			}
-			return null;
-		} // parent
-		// Alle Eventhandler notieren
-	if (pointer_event) {
-		document.body.addEventListener("pointerdown", handle_down, false);
-		document.body.addEventListener("pointermove", handle_move, false);
-		document.body.addEventListener("pointerup", handle_up, false);
-	} else if (touch_event) {
-		document.body.addEventListener("touchstart", handle_down, false);
-		document.body.addEventListener("touchmove", handle_move, false);
-		document.body.addEventListener("touchend", handle_up, false);
-	} else {
-		document.body.addEventListener("mousedown", handle_down, false);
-		document.body.addEventListener("mousemove", handle_move, false);
-		document.body.addEventListener("mouseup", handle_up, false);
-	}
-	document.body.addEventListener("keydown", handle_keydown, false);
-	// finish für alle verschiebbaren Elemente aufrufen
-	const draggable = document.querySelectorAll("." + drag_class);
-	for (let i = 0; i < draggable.length; i++) {
-		finish(draggable[i]);
-	}
-	// css-Angaben für die Bedienbarkeit
-	const style = document.createElement('style');
-	style.innerText = "." + drag_class + ":focus { box-shadow: 10px 30px 15px #bb5776; outline: 0; border-radius: 80px; } " +
-		"." + drag_class +
-		" { position: absolute; cursor: move; touch-action: none; } ";
-	document.head.appendChild(style);
-	// finish für nachträglich erzeugte verschiebbare Elemente aufrufen
-	new MutationObserver(function (mutationsList) {
-			for (let i = 0; i < mutationsList.length; i++) {
-				if (mutationsList[i].type === 'childList') {
-					for (let j = 0; j < mutationsList[i].addedNodes.length; j++) {
-						if (mutationsList[i].addedNodes[j].classList && mutationsList[i].addedNodes[
-								j].classList.contains(drag_class)) {
-							finish(mutationsList[i].addedNodes[j]);
-						}
-					}
-				}
-			}
-		})
-		.observe(document.body, {
-			childList: true,
-			subtree: true
-		});
-}, false); // DOMContentLoaded
-// Ende drag_n_drop.js
-
-var timeUp = function() {
-    alert("you spend 10 minutes in this space. Try a different one!");
-};
-setTimeout(timeUp, 600000);
-
-
-</script>
-</body>
+      var timeUp = function () {
+        alert("you spend 10 minutes in this space. Try a different one!");
+      };
+      setTimeout(timeUp, 600000);
+    </script>
+  </body>
 </html>

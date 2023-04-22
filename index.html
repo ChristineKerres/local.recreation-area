@@ -1,97 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>♥♥♥♥local.recreation area♥♥♥♥</title>
-    <link rel="icon" type="image/x-icon" href="/img/heart.png">
+    <link rel="icon" type="image/x-icon" href="/img/heart.png" />
     <script src="jquery-3.6.1.min.js"></script>
-</head>
-<body>
-<!--INFOBOX-->    
-<div id="overlay"></div>
+  </head>
+  <body>
+    <!--INFOBOX-->
+    <div id="overlay"></div>
 
-<div id="infobox" class="infobox">
-    <button data-close-button class="close-button">&times;</button>
-    <div>
-<br>love by default
+    <div id="infobox" class="infobox">
+      <button data-close-button class="close-button">&times;</button>
+      <div>
+        <br />love by default
 
-<br>
-<br>// There must be more love 
-by default! 
-<br>
-Our lives are
-shifting more and more 
-into the digital realm. 
-We exist alongside our 
-version in the real world,
-multiple times in digital
-worlds. The digital world
-is still built far too 
-strongly on the capitalist 
-idea, it is not tailored 
-to our needs and that 
-includes having a place 
-to rest and reset.
-Using the existing energy 
-from the digital world, 
-local.recreation area is 
-a space for selfcare.
+        <br />
+        <br />// There must be more love by default!
+        <br />
+        Our lives are shifting more and more into the digital realm. We exist
+        alongside our version in the real world, multiple times in digital
+        worlds. The digital world is still built far too strongly on the
+        capitalist idea, it is not tailored to our needs and that includes
+        having a place to rest and reset. Using the existing energy from the
+        digital world, local.recreation area is a space for selfcare.
+      </div>
     </div>
-</div>
-<!--MAIN-->
-<img id="blur-tb" src="img/blur_tb.png" alt="">
-<img id="blur-lr" src="img/blur_lr.png" alt="">
-<h1 data-infobox-target="#infobox" style="cursor: pointer;">local.recreation area</h1>
+    <!--MAIN-->
+    <h1>local.recreation area</h1>
+    <div class="container">
+      <div class="container-left">
+        <div id="background-info-trigger">
+          <b> background info</b>
+        </div>
+        <div id="background-info" style="display: none">
+          <b> There must be more love by default!</b>
+          <br />
+          Our lives are shifting more and more into the digital realm. We exist
+          alongside our version in the real world, multiple times in digital
+          worlds. The digital world is still built far too strongly on the
+          capitalist idea, it is not tailored to our needs and that includes
+          having a place to rest and reset. Using the existing energy from the
+          digital world, local.recreation area is a space for selfcare.
+        </div>
+      </div>
+      <div class="container-right">
+        <img id="blur-tb" src="img/blur_tb.png" alt="" />
+        <img id="blur-lr" src="img/blur_lr.png" alt="" />
 
-<div class="areas">
-<img style="height:20px;" src="img/heart.png" alt=""><a class="space" href="interface-meditation.html" style="letter-spacing: 0.105em;"> interface meditation <img style="height:20px;" src="img/heart.png" alt=""></a>
-<br><img style="height:20px;" src="img/heart.png" alt=""><a class="space" href="CPU-energy.html" style="letter-spacing: 0.48em;"> cpu energy <img style="height:20px;" src="img/heart.png" alt=""></a>
-<br><img style="height:20px;" src="img/heart.png" alt=""><a class="space" href="telepathic-touch.html" style="letter-spacing: 0.3em;"> telepathic touch <img style="height:20px;" src="img/heart.png" alt=""></a>
-<br><img style="height:20px;" src="img/heart.png" alt=""><a class="space" href="backgroundlight-therapy.html" style="letter-spacing: 0.01em;"> backgroundlight therapy <img style="height:20px;" src="img/heart.png" alt=""></a> 
-</div>
+        <div class="areas">
+          <a class="space-01" href="interface-meditation.html"
+            >interface meditation</a
+          >
+          <br /><a class="space-01" href="CPU-energy.html">cpu energy</a>
+          <br /><a class="space-01" href="telepathic-touch.html"
+            >telepathic touch
+          </a>
+          <br /><a class="space-01" href="backgroundlight-therapy.html"
+            >backgroundlight therapy</a
+          >
+        </div>
 
-<button id="message"><a target="_blank" href="https://docs.google.com/document/d/1oZpoY2PPIfeDIYY411yyQHqt0rw3iNGIg3Twcsmezsg/edit?usp=sharing">guestbook</a></button>
+        <button id="message">
+          <a
+            target="_blank"
+            href="https://docs.google.com/document/d/1oZpoY2PPIfeDIYY411yyQHqt0rw3iNGIg3Twcsmezsg/edit?usp=sharing"
+            >guestbook</a
+          >
+        </button>
+      </div>
+    </div>
 
-<script src="script.js"></script>
-<script>
-    var rev = "fwd";
-    function titlebar(val){
-        var msg  = "♥♥♥♥local.recreation area♥♥♥♥";
+    <script src="script.js"></script>
+    <script>
+      var message = document.getElementById("background-info");
+      var i = document.getElementById("background-info-trigger");
+      var displaySeconds = 15;
+
+      function hideMessage() {
+        message.style.display = "none";
+        i.style.display = "block";
+      }
+
+      function showMessage() {
+        i.style.display = "none";
+        message.style.display = "block";
+        setTimeout(hideMessage, displaySeconds * 1000);
+      }
+
+      i.addEventListener("click", showMessage);
+
+      var rev = "fwd";
+      function titlebar(val) {
+        var msg = "♥♥♥♥local.recreation area♥♥♥♥";
         var res = " ";
         var speed = 100;
         var pos = val;
-        msg = ""+msg+"";
+        msg = "" + msg + "";
         var le = msg.length;
-        if(rev == "fwd"){
-            if(pos < le){
-                pos = pos+1;
-                scroll = msg.substr(0,pos);
-                document.title = scroll;
-                timer = window.setTimeout("titlebar("+pos+")",speed);
-            }
-            else {
-                rev = "bwd";
-                timer = window.setTimeout("titlebar("+pos+")",speed);
-            }
+        if (rev == "fwd") {
+          if (pos < le) {
+            pos = pos + 1;
+            scroll = msg.substr(0, pos);
+            document.title = scroll;
+            timer = window.setTimeout("titlebar(" + pos + ")", speed);
+          } else {
+            rev = "bwd";
+            timer = window.setTimeout("titlebar(" + pos + ")", speed);
+          }
+        } else {
+          if (pos > 0) {
+            pos = pos - 1;
+            var ale = le - pos;
+            scrol = msg.substr(ale, le);
+            document.title = scrol;
+            timer = window.setTimeout("titlebar(" + pos + ")", speed);
+          } else {
+            rev = "fwd";
+            timer = window.setTimeout("titlebar(" + pos + ")", speed);
+          }
         }
-        else {
-            if(pos > 0) {
-                pos = pos-1;
-                var ale = le-pos;
-                scrol = msg.substr(ale,le);
-                document.title = scrol;
-                timer = window.setTimeout("titlebar("+pos+")",speed);
-            }
-            else {
-                rev = "fwd";
-                timer = window.setTimeout("titlebar("+pos+")",speed);
-            }
-        }
-    }
-    titlebar(0);
-</script>
-</body>
+      }
+      titlebar(0);
+    </script>
+  </body>
 </html>
